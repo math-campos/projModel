@@ -2,8 +2,10 @@
 package br.edu.ifsul.tests;
 
 import br.edu.ifsul.model.Consulta;
+import br.edu.ifsul.model.Medicamento;
 import br.edu.ifsul.model.Receituario;
 import java.util.Calendar;
+import java.util.Set;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,11 +24,10 @@ public class TestePersistirReceituario {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SistemaMedicoModelPU");
         EntityManager em = emf.createEntityManager();
-        Consulta c = em.find(Consulta.class, 1);
+        Consulta c = em.find(Consulta.class, 6);
         Receituario r = new Receituario();
         r.setPosologia("Duas vezes ao dia");
         r.setValidade(Calendar.getInstance());
-       
         c.adicionarReceituario(r);
         em.getTransaction().begin();
         em.merge(c);

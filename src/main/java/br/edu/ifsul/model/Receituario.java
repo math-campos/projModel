@@ -92,19 +92,6 @@ public class Receituario implements Serializable {
         this.posologia = posologia;
     }
 
-    /**
-     * @return the validade
-     */
-    public Calendar getValidade() {
-        return validade;
-    }
-
-    /**
-     * @param validade the validade to set
-     */
-    public void setValidade(Calendar validade) {
-        this.setValidade(validade);
-    }
 
     @Override
     public int hashCode() {
@@ -161,6 +148,20 @@ public class Receituario implements Serializable {
      */
     public Set<Medicamento> getMedicamentos() {
         return medicamentos;
+    }
+
+    /**
+     * @return the validade
+     */
+    public Calendar getValidade() {
+        return validade;
+    }
+
+    /**
+     * @param validade the validade to set
+     */
+    public void setValidade(Calendar validade) {
+        this.validade = validade;
     }
     
     
