@@ -9,6 +9,8 @@
     <class>br.edu.ifsul.model.Medico</class>
     <class>br.edu.ifsul.model.Paciente</class>
     <class>br.edu.ifsul.model.Receituario</class>
+    <class>br.edu.ifsul.model.Permissao</class>
+    <class>br.edu.ifsul.model.Usuario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/sistemamedico"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
